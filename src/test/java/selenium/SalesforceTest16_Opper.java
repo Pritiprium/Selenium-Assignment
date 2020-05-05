@@ -19,8 +19,6 @@ public class SalesforceTest16_Opper extends Browserutility {
 		waitforvisiblity(opper);
 		opper.click();
 		Thread.sleep(3000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
 		WebElement veiw=driver.findElement(By.xpath("//select[@id='fcf']"));
 		waitforvisiblity(veiw);
 		System.out.println(veiw.getText());
@@ -28,11 +26,6 @@ public class SalesforceTest16_Opper extends Browserutility {
 		Thread.sleep(2000);
 		Select drpdwn = new Select(veiw);
 		drpdwn.selectByIndex(0);
-		Thread.sleep(3000);
-		Select drpdwn1 = new Select(veiw);
-		
-		drpdwn1.selectByIndex(1);
-	
 		Thread.sleep(3000);
 		driver.quit();
 		

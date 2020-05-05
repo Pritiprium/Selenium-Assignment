@@ -85,6 +85,7 @@ public class SalesforceTest8 extends Browserutility {
 		WebElement activityreminder=driver.findElement(By.xpath("//span[@id='Reminders_font']"));
 		
 		activityreminder.click();
+		Thread.sleep(2000);
 		WebElement openReminder=driver.findElement(By.xpath("//input[@id='testbtn']"));
 		openReminder.click();
 	

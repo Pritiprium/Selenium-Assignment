@@ -20,8 +20,8 @@ public class SalesforceTest11_AC extends Browserutility {
 		waitforvisiblity(account);		
 		account.click();
 		Thread.sleep(2000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
+//		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
+//		closebtn.click();
 		WebElement neww=driver.findElement(By.xpath("//input[contains(@name,'new')]"));
 		neww.click();
 		Thread.sleep(2000);
@@ -29,13 +29,15 @@ public class SalesforceTest11_AC extends Browserutility {
 		Thread.sleep(3000);
 		WebElement newAcName=driver.findElement(By.xpath("//input[@id='acc2']"));
 		waitforvisiblity(newAcName);
-		newAcName.sendKeys("Sleniumabc");
+		newAcName.sendKeys("Slenium");
 		Thread.sleep(2000);
 		WebElement type=driver.findElement(By.xpath("//select[@id='acc6']"));
+		waitforvisiblity(type);
 		Select dropdwn = new Select(type);
 		dropdwn.selectByIndex(6);
 		Thread.sleep(2000);
 		WebElement priority=driver.findElement(By.xpath("//select[@id='00N5w00000HXjWi']"));
+		waitforvisiblity(priority);
 		Select dd1 = new Select (priority);
 		dd1.selectByIndex(1);
 		Thread.sleep(3000);

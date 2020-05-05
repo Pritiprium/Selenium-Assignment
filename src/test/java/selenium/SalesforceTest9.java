@@ -21,7 +21,8 @@ public class SalesforceTest9 extends Browserutility{
 		Thread.sleep(3000);
 		
 		driver.close();
-		
+		Thread.sleep(2000);
+		driver.quit();
 		
 		
 		

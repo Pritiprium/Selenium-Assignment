@@ -10,11 +10,12 @@ public class salesforceTest2 extends Browserutility {
 	public static void main(String[] args) throws Exception {
 		launchbrwsr("ch");
 		loginto();
-		Thread.sleep(2000);
-	WebElement text=driver.findElement(By.xpath("//h2[@id='header']"));
-	System.out.println(text.getText());
+		Thread.sleep(3000);
+	WebElement home=driver.findElement(By.id("home_Tab"));
+	waitforvisiblity(home);
+	System.out.println(home.getText());
 	Thread.sleep(3000);
-	if(text.getText().trim().equals("Verify Your Identity")) {
+	if(home.getText().trim().equals("Home")) {
 		System.out.println("HOME Page Displayed--->PASS");
 	}
 	else {

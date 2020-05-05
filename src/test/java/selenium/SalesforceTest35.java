@@ -1,6 +1,7 @@
 package selenium;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -16,20 +17,26 @@ public class SalesforceTest35 extends Browserutility{
 		waitforvisiblity(home);
 		home.click();
 		Thread.sleep(3000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
-		Thread.sleep(2000);
 		
-		WebElement date=driver.findElement(By.xpath("//a[contains(text(),'Sunday April 26, 2020')]"));
+		WebElement date=driver.findElement(By.xpath("//span[@class=\"pageDescription\"]//a[1]"));
 		date.click();
 		Thread.sleep(3000);
 		WebElement time=driver.findElement(By.xpath("//div[@id='p:f:j_id25:j_id61:20:j_id64']"));
 		waitforvisiblity(time);
 		time.click();
 		Thread.sleep(2000);
-		WebElement subject=driver.findElement(By.xpath("//input[@id='evt5']"));
+		WebElement subject=driver.findElement(By.xpath("//img[@class='comboboxIcon']"));
 		waitforvisiblity(subject);
-		subject.sendKeys("others");
+		subject.click();
+		Thread.sleep(2000);
+		ArrayList <String> newtab = new ArrayList(driver.getWindowHandles());
+		driver.switchTo().window(newtab.get(1));
+		Thread.sleep(2000);
+		
+		WebElement other=driver.findElement(By.xpath("//a[contains(text(),'Other')]"));
+		waitforvisiblity(other);
+		other.click();
+		driver.switchTo().window(newtab.get(0));
 		Thread.sleep(2000);
 		WebElement endtime=driver.findElement(By.xpath("//input[@id='EndDateTime_time']"));
 		waitforvisiblity(endtime);

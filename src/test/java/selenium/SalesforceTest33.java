@@ -43,7 +43,7 @@ public class SalesforceTest33 extends Browserutility{
 		WebElement mytab1=driver.findElement(By.xpath("//input[contains(@name,'customize')]"));
 		waitforvisiblity(mytab1);
 		mytab1.click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		driver.quit();
 		
 		

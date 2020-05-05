@@ -7,47 +7,55 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class Salesforce4 extends Browserutility{
+import com.relevantcodes.extentreports.LogStatus;
+
+public class Salesforce4 extends Browserutility {
 
 	public static void main(String[] args) throws Exception {
+		Report_utility rp = new Report_utility();
 		launchbrwsr("ch");
-		WebElement usernm=driver.findElement(By.xpath("//input[@id='username']"));
-		String filepath= System.getProperty("user.dir")+"/src/main/java/Credential.properties";
+		rp.CreatReport();
+		rp.CreatTest("Salesforce4");
+		rp.logger.log(LogStatus.INFO, "Browser launch ");
+		WebElement usernm = driver.findElement(By.xpath("//input[@id='username']"));
+		String filepath = System.getProperty("user.dir") + "/src/main/java/Credential.properties";
 		Properties prop = new Properties();
-		
+
 		FileInputStream fi = new FileInputStream(filepath);
 		prop.load(fi);
 		System.getProperties().putAll(prop);
 		String userName = prop.getProperty("UserName");
 		usernm.sendKeys(userName);
 		Thread.sleep(2000);
-		WebElement forgpass=driver.findElement(By.xpath("//a[@id='forgot_password_link']"));
+		WebElement forgpass = driver.findElement(By.xpath("//a[@id='forgot_password_link']"));
 		waitforvisiblity(forgpass);
-		WebElement text=driver.findElement(By.xpath("//a[contains(text(),'Forgot Your Password?')]"));
+		WebElement text = driver.findElement(By.xpath("//a[contains(text(),'Forgot Your Password?')]"));
 		System.out.println(text.getText());
 		Thread.sleep(2000);
-		if(text.getText().trim().equals("Forgot Your Password?")) {
+		if (text.getText().trim().equals("Forgot Your Password?")) {
+			rp.logger.log(LogStatus.PASS, "Test Case PAss");
 			System.out.println("PASS");
-		}
-		else {
+		} else {
 			System.out.println("FAIL");
 		}
-		
+
 		Thread.sleep(2000);
-		forgpass.click();		
-		
+		forgpass.click();
+
 		Thread.sleep(2000);
-		WebElement user=driver.findElement(By.xpath("//input[@id='un']"));
+		WebElement user = driver.findElement(By.xpath("//input[@id='un']"));
 		waitforvisiblity(user);
 		user.sendKeys(userName);
 		Thread.sleep(2000);
-		WebElement contnue=driver.findElement(By.xpath("//input[@id='continue']"));
+		WebElement contnue = driver.findElement(By.xpath("//input[@id='continue']"));
 		waitforvisiblity(contnue);
 		contnue.click();
-		
+
 		Thread.sleep(4000);
-		
 		driver.quit();
+		rp.EndTestCase();
+		rp.EndReport();
+
 
 	}
 

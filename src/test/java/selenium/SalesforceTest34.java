@@ -16,11 +16,8 @@ public class SalesforceTest34 extends Browserutility{
 		waitforvisiblity(home);
 		home.click();
 		Thread.sleep(3000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
-		Thread.sleep(2000);
-		
-		WebElement date=driver.findElement(By.xpath("//a[contains(text(),'Sunday April 26, 2020')]"));
+	
+		WebElement date=driver.findElement(By.xpath("//span[@class='pageDescription']/a[1]"));
 		date.click();
 		Thread.sleep(3000);
 //		
@@ -46,7 +43,7 @@ public class SalesforceTest34 extends Browserutility{
 		waitforvisiblity(save);
 		save.click();
 		Thread.sleep(5000);
-//		driver.quit();
+		driver.quit();
 		
 		
 		

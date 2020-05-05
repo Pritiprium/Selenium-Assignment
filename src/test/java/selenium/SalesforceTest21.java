@@ -18,9 +18,9 @@ public class SalesforceTest21 extends Browserutility {
 		waitforvisiblity(leads);
 		leads.click();
 		Thread.sleep(4000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
-		Thread.sleep(2000);
+//		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
+//		closebtn.click();
+//		Thread.sleep(2000);
 		WebElement veiw=driver.findElement(By.xpath("//select[@id='fcf']"));
 		waitforvisiblity(veiw);
 		veiw.click();
@@ -33,7 +33,7 @@ public class SalesforceTest21 extends Browserutility {
 		userdpdw.click();
 		Thread.sleep(2000);
 		logout();
-		Thread.sleep(3000);
+		Thread.sleep(7000);
 		driver.quit();
 		
 		

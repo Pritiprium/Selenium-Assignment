@@ -38,6 +38,8 @@ public class SalesforceTest32_home extends Browserutility{
 		WebElement save=driver.findElement(By.xpath("//input[contains(@class,'zen-btn zen-primaryBtn zen-pas')]"));
 		waitforvisiblity(save);
 		save.click();
+		Thread.sleep(7000);
+		driver.quit();
 		
 		
 		

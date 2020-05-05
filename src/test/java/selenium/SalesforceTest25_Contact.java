@@ -16,9 +16,9 @@ public class SalesforceTest25_Contact extends Browserutility{
 		waitforvisiblity(contact);
 		contact.click();
 		Thread.sleep(2000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
-		Thread.sleep(2000);
+//		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
+//		closebtn.click();
+//		Thread.sleep(2000);
 
 		WebElement neww=driver.findElement(By.xpath("//input[@name='new']"));
 		waitforvisiblity(neww);
@@ -35,7 +35,7 @@ public class SalesforceTest25_Contact extends Browserutility{
 		WebElement save=driver.findElement(By.xpath("//div[contains(@class,'pbHeader')]//input[1]"));
 		waitforvisiblity(save);
 		save.click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		driver.quit();
 
 	}

@@ -20,16 +20,16 @@ public class SalesforceTest15_AC extends Browserutility {
 		waitforvisiblity(account);
 		account.click();
 		Thread.sleep(3000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
-		Thread.sleep(2000);
+//		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
+//		closebtn.click();
+//		Thread.sleep(2000);
 		WebElement lastActivity=driver.findElement(By.xpath("//a[contains(text(),'Accounts with last activity > 30 days')]"));
 		lastActivity.click();
 		Thread.sleep(2000);
 		WebElement dateField=driver.findElement(By.xpath("//img[@id='ext-gen148']"));
 		dateField.click();
 		Thread.sleep(2000);
-		WebElement createDt=driver.findElement(By.xpath("//div[@class='x-combo-list-item x-combo-selected']"));
+		WebElement createDt=driver.findElement(By.xpath("//div[contains(text(),'Created Date')]"));
 		waitforvisiblity(createDt);
 		createDt.click();
 		Thread.sleep(2000);
@@ -37,29 +37,19 @@ public class SalesforceTest15_AC extends Browserutility {
 		fromDt.click();
 		Thread.sleep(2000);
 		WebElement date=driver.findElement(By.xpath("//span[contains(text(),'25')]"));
+		waitforvisiblity(date);
 		date.click();
 		Thread.sleep(3000);
 		WebElement to = driver.findElement(By.xpath("//img[@id='ext-gen154']"));
 		to.click();
 		Thread.sleep(3000);
-//		WebElement march=driver.findElement(By.xpath("//button[@id='ext-gen273']"));
-//		march.click();
-//		Thread.sleep(2000);
-//		WebElement april=driver.findElement(By.xpath("//a[contains(text(),'Apr')]"));
-//		waitforvisiblity(april);
-//		april.click();
-//		Thread.sleep(2000);
-//		WebElement ok=driver.findElement(By.xpath("//button[@class='x-date-mp-ok']"));
-//		ok.click();
-//		Thread.sleep(2000);
-		
-		WebElement today=driver.findElement(By.xpath("//button[@id='ext-gen276']"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		today.click();
-//		WebElement date1=driver.findElement(By.xpath("//span[contains(text(),'25')]"));
-//		waitforvisiblity(date1);
-//		date1.click();
+	
+		WebElement today=driver.findElement(By.xpath("//button[contains(text(),'Today')][1]"));
+
 		Thread.sleep(3000);
+		today.click();
+		
+		Thread.sleep(2000);
 		WebElement sv=driver.findElement(By.xpath("//button[@id='ext-gen49']"));
 		waitforvisiblity(sv);
 		sv.click();
@@ -71,7 +61,8 @@ public class SalesforceTest15_AC extends Browserutility {
 		uniqueRepot.sendKeys("NewReport");
 		Thread.sleep(2000);
 		
-		WebElement saveNrun=driver.findElement(By.xpath("//button[@id='ext-gen332']"));
+		WebElement saveNrun=driver.findElement(By.xpath("//button[@id='ext-gen330']"));
+		waitforvisiblity(saveNrun);
 		saveNrun.click();
 		
 		//NOT COMPLETED
@@ -81,7 +72,16 @@ public class SalesforceTest15_AC extends Browserutility {
 		
 		
 		
-		
+		//		WebElement march=driver.findElement(By.xpath("//button[@id='ext-gen273']"));
+//		march.click();
+//		Thread.sleep(2000);
+//		WebElement april=driver.findElement(By.xpath("//a[contains(text(),'Apr')]"));
+//		waitforvisiblity(april);
+//		april.click();
+//		Thread.sleep(2000);
+//		WebElement ok=driver.findElement(By.xpath("//button[@class='x-date-mp-ok']"));
+//		ok.click();
+//		Thread.sleep(2000);
 		
 		
 		

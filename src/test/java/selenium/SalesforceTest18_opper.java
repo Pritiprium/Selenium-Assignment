@@ -18,12 +18,12 @@ public class SalesforceTest18_opper extends Browserutility{
 		waitforvisiblity(opper);
 		opper.click();
 		Thread.sleep(3000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
+//		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
+//		closebtn.click();
 		WebElement opperPipln=driver.findElement(By.xpath("//a[contains(text(),'Opportunity Pipeline')]"));
 		waitforvisiblity(opperPipln);
 		opperPipln.click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		driver.quit();
 		
 		

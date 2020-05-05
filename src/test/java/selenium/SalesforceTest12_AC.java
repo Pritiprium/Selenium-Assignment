@@ -16,9 +16,9 @@ public class SalesforceTest12_AC extends Browserutility{
 		waitforvisiblity(account);
 		account.click();
 		Thread.sleep(3000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
-		Thread.sleep(1000);
+//		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
+//		closebtn.click();
+//		Thread.sleep(1000);
 		WebElement creatN_AC=driver.findElement(By.xpath("//a[contains(text(),'Create New View')]"));
 		waitforvisiblity(creatN_AC);
 		creatN_AC.click();
@@ -35,7 +35,7 @@ public class SalesforceTest12_AC extends Browserutility{
 		waitforvisiblity(save);
 		save.click();
 		Thread.sleep(5000);
-//		driver.quit();
+		driver.quit();
 		
 		
 		

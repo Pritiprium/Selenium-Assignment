@@ -18,9 +18,9 @@ public class SalesforceTest24_lead extends Browserutility{
 		waitforvisiblity(leads);
 		leads.click();
 		Thread.sleep(4000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
-		Thread.sleep(2000);
+//		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
+//		closebtn.click();
+//		Thread.sleep(2000);
 		WebElement neww=driver.findElement(By.xpath("//input[@name='new']"));
 		neww.click();
 		Thread.sleep(2000);
@@ -35,7 +35,7 @@ public class SalesforceTest24_lead extends Browserutility{
 		WebElement save=driver.findElement(By.xpath("//div[contains(@class,'pbBottomButtons')]//input[1]"));
 		waitforvisiblity(save);
 		save.click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		driver.quit();
 		
 		

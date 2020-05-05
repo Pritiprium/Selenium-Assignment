@@ -18,9 +18,9 @@ public class SalesforceTest28_Contact  extends Browserutility{
 		waitforvisiblity(contact);
 		contact.click();
 		Thread.sleep(2000);
-		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
-		closebtn.click();
-		Thread.sleep(2000);
+//		WebElement closebtn = driver.findElement(By.xpath("//a[@id=\"tryLexDialogX\"]"));
+//		closebtn.click();
+//		Thread.sleep(2000);
 		WebElement createnew=driver.findElement(By.xpath("//a[contains(text(),'Create New View')]"));
 		waitforvisiblity(createnew);
 		createnew.click();
